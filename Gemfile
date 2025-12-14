@@ -63,3 +63,5 @@ group :test do
 end
 gem 'bootstrap', '~> 5.3.3'
 gem "dartsass-rails", "~> 0.5.1"
+
+gem "devise", "~> 4.9"

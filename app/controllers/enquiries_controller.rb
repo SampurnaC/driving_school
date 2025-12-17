@@ -6,6 +6,7 @@ class EnquiriesController < ApplicationController
   def create
     @enquiry= Enquiry.new(enquiry_params)
     if @enquiry.save
+      EnquiryMailer.new_enquiry(@enquiry).deliver_now
       redirect_to root_path
     end
   end

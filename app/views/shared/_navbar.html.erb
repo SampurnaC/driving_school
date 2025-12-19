@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-danger" href="/">
+      Driving Institute
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#why-us">Why Choose Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#testimonials">Testimonials</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <%= link_to "Enroll Now", new_enquiry_path, class: "btn btn-danger px-4 fw-semibold" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

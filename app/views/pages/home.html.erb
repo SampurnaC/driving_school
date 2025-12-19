@@ -1,4 +1,3 @@
-<%= render "shared/navbar" %>
 <section class="py-5 text-white"
   style="background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
          url('<%= asset_path("hero.jpg") %>') center/cover no-repeat;
@@ -32,9 +31,15 @@
         </ul>
 
         <div class="d-flex gap-3 mt-4">
-          <a href="<%= new_enquiry_path %>" class="btn btn-danger btn-lg px-5 shadow">
+          
+
+          <button
+            class="btn btn-danger btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#enquiryModal">
             Enroll Now
-          </a>
+          </button>
+
           <a href="#why-us" class="btn btn-outline-light btn-lg px-5">
             Why Choose Us
           </a>
@@ -182,6 +187,8 @@
     </a>
   </div>
 </section>
+
+<%= render "enquiries/enrollmodal" %>
 
 <footer class="bg-black text-white py-4">
   <div class="container text-center">

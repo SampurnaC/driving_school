@@ -1,5 +1,4 @@
 <div class="container mt-5">
-  <h2>Driving Lesson Enquiry</h2>
 
   <%= form_with model: enquiry, local: true do |f| %>
     <div class="mb-3">
@@ -22,6 +21,6 @@
       <%= f.text_area :message, class: "form-control", rows: 4 %>
     </div>
 
-    <%= f.submit "Submit Enquiry", class: "btn btn-primary" %>
+    <%= f.submit "Submit Enquiry", class: "btn btn-danger" %>
   <% end %>
 </div>

@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :enquiries, only: [:new, :create]
 
   root "pages#home"
+
+  namespace :admin do
+    resources :enquiries
+  end
 end

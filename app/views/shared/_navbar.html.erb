@@ -16,8 +16,13 @@
         <li class="nav-item">
           <a class="nav-link" href="#testimonials">Testimonials</a>
         </li>
-        <li class="nav-item ms-lg-3">
-          <%= link_to "Enroll Now", new_enquiry_path, class: "btn btn-danger px-4 fw-semibold" %>
+        <li class="nav-item">
+          <button
+            class="btn btn-danger btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#enquiryModal">
+            Enroll Now
+          </button>
         </li>
       </ul>
     </div>

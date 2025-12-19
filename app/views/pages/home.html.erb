@@ -1,108 +1,195 @@
-<!-- app/views/home/index.html.erb -->
-<div class="container-fluid p-0">
+<%= render "shared/navbar" %>
+<section class="py-5 text-white"
+  style="background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+         url('<%= asset_path("hero.jpg") %>') center/cover no-repeat;
+         min-height: 100vh;">
 
-  <section class="bg-dark text-white text-center py-5" style="background: url('/hero-bg.jpg') center/cover no-repeat;">
-    <div class="container">
-      <h1 class="display-4 fw-bold">Learn to Drive with Confidence</h1>
-      <p class="lead mb-4">Professional driving lessons, flexible schedules, and certified instructors.</p>
-      <a href="<%= new_enquiry_path %>" class="btn btn-primary btn-lg">Enroll Now</a>
+  <div class="container h-100 d-flex align-items-center">
+    <div class="row w-100 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1 class="display-4 fw-bold mt-3">
+          Learn to Drive with <span class="text-danger">Confidence</span>
+        </h1>
+
+        <p class="lead mt-4">
+          Professional instructors, modern vehicles, and structured lessons
+          designed to make you a safe and confident driver.
+        </p>
+
+        <ul class="list-unstyled mt-4">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-danger"></i>
+            Government approved institute
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-danger"></i>
+            High driving test pass rate
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-danger"></i>
+            Beginner-friendly training
+          </li>
+        </ul>
+
+        <div class="d-flex gap-3 mt-4">
+          <a href="<%= new_enquiry_path %>" class="btn btn-danger btn-lg px-5 shadow">
+            Enroll Now
+          </a>
+          <a href="#why-us" class="btn btn-outline-light btn-lg px-5">
+            Why Choose Us
+          </a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-5">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-car-front fs-1 mb-3"></i>
-              <h5 class="card-title">Beginner Lessons</h5>
-              <p class="card-text">Step-by-step driving lessons for beginners to learn safely and confidently.</p>
-            </div>
-          </div>
+<section class="py-5 bg-black text-white">
+  <div class="container">
+    <div class="row text-center g-4">
+
+      <div class="col-md-4">
+        <div class="p-4 border border-danger rounded h-100">
+          <i class="bi bi-car-front-fill fs-1 text-danger"></i>
+          <h5 class="mt-3">Modern Cars</h5>
+          <p class="text-muted">Safe, clean, and modern training vehicles.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-speedometer2 fs-1 mb-3"></i>
-              <h5 class="card-title">Advanced Training</h5>
-              <p class="card-text">Advanced driving courses, highway training, and defensive driving techniques.</p>
-            </div>
-          </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 border border-danger rounded h-100">
+          <i class="bi bi-person-badge-fill fs-1 text-danger"></i>
+          <h5 class="mt-3">Expert Trainers</h5>
+          <p class="text-muted">Experienced instructors with calm teaching methods.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <i class="bi bi-person-check fs-1 mb-3"></i>
-              <h5 class="card-title">Certified Instructors</h5>
-              <p class="card-text">Learn from professional, licensed instructors with years of experience.</p>
-            </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 border border-danger rounded h-100">
+          <i class="bi bi-clock-fill fs-1 text-danger"></i>
+          <h5 class="mt-3">Flexible Timing</h5>
+          <p class="text-muted">Morning, evening & weekend batches available.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Why Choose Our Driving Institute?</h2>
+      <p class="text-muted">We focus on safety, confidence, and real driving skills</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-shield-check fs-1 text-danger"></i>
+          <h5 class="mt-3">Safety First</h5>
+          <p class="text-muted">Dual-control vehicles and safety-focused training.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-person-check fs-1 text-danger"></i>
+          <h5 class="mt-3">Certified Trainers</h5>
+          <p class="text-muted">Professional instructors with years of experience.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-calendar-check fs-1 text-danger"></i>
+          <h5 class="mt-3">Flexible Schedules</h5>
+          <p class="text-muted">Classes that fit your daily routine.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-award fs-1 text-danger"></i>
+          <h5 class="mt-3">High Success Rate</h5>
+          <p class="text-muted">Most students pass their test on the first attempt.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-black text-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">What Our Students Say</h2>
+      <p class="text-muted">Real feedback from our learners</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <p class="fst-italic">
+              “The instructors were very patient and professional.
+              I passed my test on the first try!”
+            </p>
+            <h6 class="fw-bold mb-0">Sarah K.</h6>
+            <small class="text-muted">Beginner Driver</small>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="bg-light py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="/about-driving.jpg" alt="About Driving" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <h2>Why Choose Us?</h2>
-          <p>Our institute provides personalized driving lessons, flexible timing, and a focus on safety. We’ve trained hundreds of students to become confident drivers.</p>
-          <a href="#contact" class="btn btn-primary mt-3">Book a Lesson</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-5">What Our Students Say</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">"The instructors were amazing, and I passed my test on the first try!"</p>
-              <h6 class="card-subtitle mt-3 text-muted">– Sarah K.</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">"Flexible schedules made it easy to learn around my job."</p>
-              <h6 class="card-subtitle mt-3 text-muted">– Ahmed R.</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <p class="card-text">"Professional and patient instructors who really care."</p>
-              <h6 class="card-subtitle mt-3 text-muted">– Priya S.</h6>
-            </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <p class="fst-italic">
+              “Flexible timings helped me learn while working full-time.
+              Highly recommended.”
+            </p>
+            <h6 class="fw-bold mb-0">Ahmed R.</h6>
+            <small class="text-muted">Working Professional</small>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h2 class="mb-4">Ready to Learn?</h2>
-      <p class="lead mb-4">Sign up today and start your journey to becoming a safe and confident driver!</p>
-      <a href="<%= new_enquiry_path %>" class="btn btn-light btn-lg">Enroll Now</a>
-    </div>
-  </section>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <p class="fst-italic">
+              “Very professional institute with modern cars and excellent trainers.”
+            </p>
+            <h6 class="fw-bold mb-0">Priya S.</h6>
+            <small class="text-muted">License Test Student</small>
+          </div>
+        </div>
+      </div>
 
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p class="mb-0">&copy; <%= Time.now.year %> Your Driving Institute. All rights reserved.</p>
     </div>
-  </footer>
-</div>
+  </div>
+</section>
+
+<section class="py-5 bg-danger text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">Ready to Start Driving?</h2>
+    <p class="lead mb-4">Join today and become a confident driver</p>
+    <a href="<%= new_enquiry_path %>" class="btn btn-dark btn-lg px-5">
+      Enroll Now
+    </a>
+  </div>
+</section>
+
+<footer class="bg-black text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1">
+      © <%= Time.current.year %> Driving Institute. All rights reserved.
+    </p>
+    <small class="text-muted">
+      Safe Driving • Skilled Instructors • Trusted Training
+    </small>
+  </div>
+</footer>

@@ -1,0 +1,16 @@
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Enroll Now</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <%= render "enquiries/enrollform", enquiry: Enquiry.new %>
+      </div>
+
+    </div>
+  </div>
+</div>

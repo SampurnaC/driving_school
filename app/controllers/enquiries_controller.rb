@@ -13,6 +13,6 @@ class EnquiriesController < ApplicationController
 
   private
   def enquiry_params
-    params.require(:enquiry).permit(:name, :email, :phone, :message)
+    params.require(:enquiry).permit(:name, :email, :phone, :message, :preferred_date_time)
   end
 end

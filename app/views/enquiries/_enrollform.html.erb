@@ -17,6 +17,11 @@
     </div>
 
     <div class="mb-3">
+      <%= f.label :preferred_date_time, "Preferred Date and Time" %>
+      <%= f.datetime_local_field :preferred_datetime, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
       <%= f.label :message %>
       <%= f.text_area :message, class: "form-control", rows: 4 %>
     </div>

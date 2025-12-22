@@ -1,6 +1,6 @@
 <div class="container mt-5">
 
-  <%= form_with model: enquiry, local: true do |f| %>
+  <%= form_with model: enquiry, data: { controller: "flatpickr" },local: true do |f| %>
     <div class="mb-3">
       <%= f.label :name %>
       <%= f.text_field :name, class: "form-control", required: true %>
@@ -18,7 +18,7 @@
 
     <div class="mb-3">
       <%= f.label :preferred_date_time, "Preferred Date and Time" %>
-      <%= f.datetime_local_field :preferred_datetime, class: "form-control" %>
+      <%= f.datetime_local_field :preferred_date_time, class: "form-control preferred_date_time" %>
     </div>
 
     <div class="mb-3">

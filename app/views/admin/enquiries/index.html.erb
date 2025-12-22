@@ -8,6 +8,7 @@
       <th>Email</th>
       <th>Phone</th>
       <th>Message</th>
+      <th>Preferred Date and Time</th>
       <th>Status</th>
       <th>Received At</th>
       <th>Actions</th>
@@ -21,6 +22,7 @@
         <td><%= enquiry.name %></td>
         <td><%= enquiry.phone %></td>
         <td><%= enquiry.message %></td>
+        <td><%= enquiry.preferred_date_time %></td>
         <td><%= enquiry.status.titleize %></td>
         <td><%= enquiry.created_at.strftime("%d %b %Y %H:%M") %></td>
         <td>

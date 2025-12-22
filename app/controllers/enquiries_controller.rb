@@ -6,7 +6,12 @@ class EnquiriesController < ApplicationController
   def create
     @enquiry= Enquiry.new(enquiry_params)
     if @enquiry.save
+      flash[:success]="Thank you! Your form has been submitted."
       EnquiryMailer.new_enquiry(@enquiry).deliver_now
+      redirect_to root_path
+
+    else
+      flash[:alert]="Something went wrong.Please try again."
       redirect_to root_path
     end
   end

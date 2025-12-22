@@ -25,7 +25,7 @@
 
   <body>
     <%= render "shared/navbar" %>
-    <div class="container mt-5 pt-4">
+    <div class="container mt-3 pt-5">
       <% flash.each do |type, message| %>
         <div class="alert alert-<%= type == "success" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
           <%= message %>

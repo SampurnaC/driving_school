@@ -24,7 +24,15 @@
   </head>
 
   <body>
-    <%= yield %>
     <%= render "shared/navbar" %>
+    <div class="container mt-5 pt-4">
+      <% flash.each do |type, message| %>
+        <div class="alert alert-<%= type == "success" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
+          <%= message %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
   </body>
 </html>

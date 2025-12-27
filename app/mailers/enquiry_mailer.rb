@@ -3,9 +3,6 @@ class EnquiryMailer < ApplicationMailer
 
   def new_enquiry(enquiry)
     @enquiry = enquiry
-    mail=mail(subject: "New Enquiry")
-    Rails.logger.info "FINAL TO: #{mail.to.inspect}"
-    Rails.logger.info "CC: #{mail.cc.inspect}"
-    Rails.logger.info "BCC: #{mail.bcc.inspect}"
+    mail(subject: "New Enquiry")
   end
 end

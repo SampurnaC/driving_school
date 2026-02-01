@@ -7,7 +7,7 @@ class EnquiriesController < ApplicationController
     @enquiry= Enquiry.new(enquiry_params)
     if @enquiry.save
       flash[:success]="Thank you! Your form has been submitted."
-      EnquiryMailer.new_enquiry(@enquiry).deliver_now
+      EnquiryMailer.new_enquiry(@enquiry).deliver_later
       redirect_to root_path
 
     else

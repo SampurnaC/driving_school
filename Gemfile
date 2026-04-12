@@ -66,3 +66,5 @@ gem "dartsass-rails", "~> 0.5.1"
 
 gem "devise", "~> 4.9"
 gem 'pry', '~> 0.14.1'
+
+gem "sitemap_generator", "~> 6.3"
